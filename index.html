@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
- 
-  
 
+<body>
+  <h1 class="sr-only">Write your doings list</h1>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center">To Do List</h2>
+      <form class="activity-form d-flex flex-column" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="form-group d-flex align-items-center">
+          <input class="activity-input form-control mr-4" type="text" name="activity" aria-label="Write activity"
+            autocomplete="off" required>
+          <div class="custom-control custom-switch mr-3">
+            <input class="important-activity custom-control-input" type="checkbox" name="important-activity"
+              id="customSwitch">
+            <label class="custom-control-label" for="customSwitch"></label>
+          </div>
+          <button class="btn btn-outline-warning" type="submit">Add</button>
+        </div>
+      </form>
+
+      <ol class="activity-list list-group"></ol>
+    </div>
+  </section>
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
+
 </html>
