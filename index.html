@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>55-dars. Bootstrap. container va boshqa umumiy masalalar</title>
+  <title>To do list</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -13,23 +13,26 @@
 <body>
   <h1 class="sr-only">Write your doings list</h1>
 
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center">To Do List</h2>
+  <section>
+    <div class="container d-flex flex-column vh-100 overflow-hidden">
+      <h2 class="text-center mt-4">To Do List</h2>
       <form class="activity-form d-flex flex-column" action="https://echo.htmlacademy.ru" method="POST">
         <div class="form-group d-flex align-items-center">
           <input class="activity-input form-control mr-4" type="text" name="activity" aria-label="Write activity"
             autocomplete="off" required>
-          <div class="custom-control custom-switch mr-3">
-            <input class="important-activity custom-control-input" type="checkbox" name="important-activity"
-              id="customSwitch">
-            <label class="custom-control-label" for="customSwitch"></label>
-          </div>
+          <label class="mb-0 mr-3" for="customSwitch">
+            Important
+            <div class="custom-control custom-switch">
+              <input class="important-activity custom-control-input" type="checkbox" name="important-activity"
+                id="customSwitch">
+              <label class="custom-control-label" for="customSwitch"></label>
+            </div>
+          </label>
           <button class="btn btn-outline-warning" type="submit">Add</button>
         </div>
       </form>
 
-      <ol class="activity-list list-group"></ol>
+      <ol class="activity-list list-group flex-grow-1 overflow-auto"></ol>
     </div>
   </section>
 
