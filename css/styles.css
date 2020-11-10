@@ -22,3 +22,9 @@ img {
 h1 {
   font-weight: bold;
 }
+
+.activities-section .container .activity-list > li {
+  margin-left: 20px;
+  list-style-type: decimal;
+  display: list-item;
+}
