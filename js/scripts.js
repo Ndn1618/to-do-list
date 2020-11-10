@@ -26,7 +26,7 @@ elActivityForm.addEventListener('submit', function (evt) {
     for (activity of activities) {
       var elActivityItem = document.createElement('li');
 
-      elActivityItem.classList.add('list-group-item', 'list-group-item-info');
+      elActivityItem.classList.add('list-group-item', 'list-group-item-info', 'text-break');
       elActivityItem.classList.remove('list-group-item-warning');
 
       if (activity.includes(' ')) {
@@ -42,4 +42,5 @@ elActivityForm.addEventListener('submit', function (evt) {
 
   elActivityInput.value = '';
   elActivityInput.focus();
+  elImportantActivityInput.checked = false;
 });
